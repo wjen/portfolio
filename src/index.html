@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="Portfolio" lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="UTF-8">
+  <title>Wen Jen</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <!-- jQuery  -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+  <script src="https://code.angularjs.org/1.5.7/angular-animate.min.js"></script>
+
+   <!-- materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</head>
+
+<body ng-controller="MainController as vm">
+
+
+    <main ui-view>
+    </main>
+
+
+  <script src="./app/js/app.js"></script>
+  <script src="./app/js/app.routes.js"></script>
+  <script src="./app/controllers/main_controller.js"></script>
+  <script src='./app/js/init.js'> </script>
+
+</body>
+
+</html>
