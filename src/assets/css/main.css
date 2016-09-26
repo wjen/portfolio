@@ -29,9 +29,27 @@ li:hover {
   font-size: 80px;
 }
 
-.section {
+#splash {
   padding-top: 100px;
 }
+
+
+.wood {
+  background: url("../images/wood.jpg") no-repeat;
+  background-size: 100%;
+}
+.main-row {
+  background-color: rgba(0,0,0,.6);
+  width: 100%;
+
+}
+
+.icon-img {
+  height: 150px;
+  width: 100%;
+  border: 1px black solid;
+}
+
 p {
   line-height: 2rem;
 }
@@ -42,6 +60,15 @@ p {
 .container {
   width: 90%;
 }
+
+/* ui view */
+
+.project-photos {
+  height: 250px;
+  width: 100%;
+  border: 1px black solid;
+}
+
 
 .parallax-container {
   min-height: 900px;

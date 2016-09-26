@@ -20,10 +20,144 @@
 
 <body ng-controller="MainController as vm">
 
+<script src='./app/js/init.js'>
+</script>
 
+<script>
+function parallaxs(){
+  var two = document.getElementById('two');
+  var three = document.getElementById('three');
+  two.style.top = -(window.pageYOffset / 2)+'px';
+}
+window.addEventListener("scroll", parallaxs, false);
+</script>
+
+<div class="navbar-fixed nav">
+  <nav class="" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><span id='logo'>WJen</span></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Resume</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Resume</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot" id="splash">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Wen Jen</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Web Developer</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="" class="btn-large waves-effect waves-light teal lighten-1">Start Exploring</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax one"><img src="../assets/images/fb2.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax two " id="two"><img src="../assets/images/n2.png" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+    <h1 class="center brown-text">Portfolio</h1>
+    <div class="section wood">
     <main ui-view>
     </main>
+    </div>
 
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m3 m3-offset-1">
+        <br/>
+          <div class="icon-block">
+            <a ui-sref="homePage"><img class="icon-img" src="../assets/images/casegalaxyss.png" alt="casegalaxy"></a>
+            <h4 class="center brown-text">Case Galaxy</h4>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+          <br/>
+            <a ui-sref="wanderPage"><img class="icon-img" src="../assets/images/wander.png" alt="casegalaxy"></a>
+            <h4 class="center brown-text">Wander</h4>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+          <br/>
+            <a ui-sref="instaTweetPage"><img class="icon-img" src="../assets/images/instatweetss.png" alt="casegalaxy"></a>
+            <h4 class="center brown-text">InstaTweet</h4>
+          </div>
+        </div>
+
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+          <br/>
+            <a ui-sref="blackjackPage"><img class="icon-img" src="../assets/images/bjss.png" alt="casegalaxy"></a>
+            <h4 class="center brown-text">BlackJack</h4>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
 
   <script src="./app/js/app.js"></script>
   <script src="./app/js/app.routes.js"></script>
