@@ -30,11 +30,12 @@ nav .brand-logo {
 
 #logo{
   font-family: Papyrus, fantasy;
-  font-size: 21px;
+  font-size: 59px;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 10px;
+  vertical-align: middle;
 }
 
 .papy, .papy-2 {
@@ -108,10 +109,10 @@ p {
 /* ui view */
 
 .project-photos {
-  height: 250px;
+  height: 230px;
   width: 100%;
   border: 1px black solid;
-  margin: 10px;
+  margin: 20px 0;
 }
 
 
@@ -149,13 +150,16 @@ p {
 }
 
 .icon-block {
-  padding: 0 15px;
+  padding: 0px 15px;
+  margin: -10px;
 }
 .icon-block .material-icons {
   font-size: inherit;
 }
 
 footer.page-footer {
-  margin: 0;
+    margin-top: 0;
+    padding-top: 0;
 }
+
 

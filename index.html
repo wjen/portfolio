@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Wen Jen</title>
   <!-- css -->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <!-- jQuery  -->
@@ -14,12 +14,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
   <script src="https://code.angularjs.org/1.5.7/angular-animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
 
    <!-- materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://use.fontawesome.com/9f0532179b.js"></script>
 </head>
 
-<body ng-controller="MainController as vm">
+<body ng-controller="MainController">
 
 <script src='./app/js/init.js'>
 </script>
@@ -28,7 +31,7 @@
 function parallaxs(){
   var two = document.getElementById('two');
   var three = document.getElementById('three');
-  two.style.top = -(window.pageYOffset / 1)+'px';
+  two.style.top = -(window.pageYOffset / .6)+'px';
 }
 window.addEventListener("scroll", parallaxs, false);
 </script>
@@ -38,17 +41,18 @@ window.addEventListener("scroll", parallaxs, false);
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><span id='logo'>WJ</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a ng-click="gotoPortfolio()">Portfolio</a></li>
+        <li><a ng-click="gotoAbout()">About</a></li>
+        <li><a ng-click="gotoContact()">Contact</a></li>
         <li><a href="./assets/images/Wenjen-TechResume.pdf">Resume</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="#work">Portfolio</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Resume</a></li>
+        <a href="#work">Read more about raptors!</a>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -61,7 +65,7 @@ window.addEventListener("scroll", parallaxs, false);
         <br><br>
         <h1 class="header center teal-text text-lighten-2 papy">Wen Jen</h1>
         <div class="row center">
-          <h5 class="header col s12 light papy" >Web Developer</h5>
+          <h6 class="header col s12 light papy" >Web Developer</h6>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="" class="btn-large waves-effect waves-light teal lighten-2">Start Exploring</a>
@@ -73,9 +77,9 @@ window.addEventListener("scroll", parallaxs, false);
     <div class="parallax two " id="two"><img src="./assets/images/n2.png" alt="Unsplashed background img 1"></div>
   </div>
 
-<div class="container">
+<div class="container" id="portfolio">
     <div class="section">
-      <h4 class="center teal-text papy">Portfolio</h4><hr>
+      <h6 class="center teal-text papy">Portfolio</h6><hr>
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m3 m3-offset-1">
@@ -114,18 +118,15 @@ window.addEventListener("scroll", parallaxs, false);
     </div>
   </div>
 
+  <!-- ui view  -->
   <div class="section wood">
     <main ui-view>
     </main>
   </div>
 
-
-
-
-
-    <div class="section no-pad-bot">
+    <div class="section no-pad-bot" id="about">
       <div class="container">
-        <div class="row">
+        <div class="row" >
           <div class="col s12 m3 offset-m1">
             <img id="profile-pic" src="./assets/images/WDI_10_Half-7.jpg" alt="bio-pic">
           </div>
@@ -140,21 +141,20 @@ window.addEventListener("scroll", parallaxs, false);
 
 
 
-  <footer class="page-footer">
+  <footer class="page-footer" id="contact">
     <div class="container">
       <div class="row">
         <div class="col m12 s12 center">
-          <h5 class="white-text">Connect</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <h5 class="white-text">Let's Connect</h5>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+        <div class="col s12 m12 center">
           <ul>
-           <i class="small fa fa-github-square white-text">sss</i>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            <li class="center">
+              <a class="grey-text text-lighten-3" href="#!"><i class="fa-3x fa fa-linkedin-square white-text"></i></a>
+              <a class="grey-text text-lighten-3" href="#!"><i class="fa-3x fa fa-github-square white-text"></i></a>
+              <a class="grey-text text-lighten-3" href="mailto:wjen1214@gmail.com"><i class="fa-3x fa fa-envelope-o"></i></a>
+            </a>
+            </li>
           </ul>
         </div>
       </div>
