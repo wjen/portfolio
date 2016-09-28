@@ -5,8 +5,8 @@
     .run(['$anchorScroll', function($anchorScroll) {
       $anchorScroll.yOffset = 70;   // always scroll by 50 extra pixels
     }])
-    .controller("MainController", ['$scope', '$location', '$anchorScroll',
-      function($scope, $location, $anchorScroll) {
+    .controller("MainController", ['$scope', '$location', '$anchorScroll', 'smoothScroll',
+      function($scope, $location, $anchorScroll, smoothScroll) {
         $scope.gotoPortfolio = function() {
           $location.hash('portfolio');
           $anchorScroll();
@@ -22,4 +22,7 @@
       }
     ]);
 
+
+
 })();
+

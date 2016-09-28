@@ -14,7 +14,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
   <script src="https://code.angularjs.org/1.5.7/angular-animate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
 
    <!-- materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -41,18 +40,17 @@ window.addEventListener("scroll", parallaxs, false);
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><span id='logo'>WJ</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a ng-click="gotoPortfolio()">Portfolio</a></li>
+        <li><a href="#" scroll-to="portfolio" duration="1000" offset="72">Portfolio</a></li>
         <li><a ng-click="gotoAbout()">About</a></li>
         <li><a ng-click="gotoContact()">Contact</a></li>
         <li><a href="./assets/images/Wenjen-TechResume.pdf">Resume</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#work">Portfolio</a></li>
+        <li><button href="#" scroll-to="portfolio">Portfolio</button></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Resume</a></li>
-        <a href="#work">Read more about raptors!</a>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -68,7 +66,7 @@ window.addEventListener("scroll", parallaxs, false);
           <h6 class="header col s12 light papy" >Web Developer</h6>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="" class="btn-large waves-effect waves-light teal lighten-2">Start Exploring</a>
+          <a href="#" scroll-to="portfolio" duration="5000" offset="72" class="btn-large waves-effect waves-light teal lighten-2">Start Exploring</a>
         </div>
         <br><br>
       </div>
@@ -79,7 +77,7 @@ window.addEventListener("scroll", parallaxs, false);
 
 <div class="container" id="portfolio">
     <div class="section">
-      <h6 class="center teal-text papy">Portfolio</h6><hr>
+      <h6 class="center black-text papy">Portfolio</h6><hr>
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m3 m3-offset-1">
@@ -149,10 +147,10 @@ window.addEventListener("scroll", parallaxs, false);
         </div>
         <div class="col s12 m12 center">
           <ul>
-            <li class="center">
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa-3x fa fa-linkedin-square white-text"></i></a>
-              <a class="grey-text text-lighten-3" href="#!"><i class="fa-3x fa fa-github-square white-text"></i></a>
-              <a class="grey-text text-lighten-3" href="mailto:wjen1214@gmail.com"><i class="fa-3x fa fa-envelope-o"></i></a>
+            <li id="icon-link" class="center">
+              <a class="" href="https://www.linkedin.com/in/wen-jen" target="_blank"><i class="fa-3x fa fa-linkedin-square white-text"></i></a>
+              <a class="" href="https://github.com/wjen" target="_blank"><i class="fa-3x fa fa-github-square white-text"></i></a>
+              <a class="white-text icon-link"  href="mailto:wjen1214@gmail.com" target="_blank"><i class="fa-3x fa fa-envelope-o"></i></a>
             </a>
             </li>
           </ul>
@@ -170,6 +168,7 @@ window.addEventListener("scroll", parallaxs, false);
   <script src="./app/js/app.js"></script>
   <script src="./app/js/app.routes.js"></script>
   <script src="./app/controllers/main_controller.js"></script>
+  <script src="./bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
 
 
 </body>

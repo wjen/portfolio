@@ -1,7 +1,7 @@
 (function(){
   "use strict";
 
-  angular.module("Portfolio", ["ui.router", "ngAnimate"]);
+  angular.module("Portfolio", ["ui.router", "ngAnimate", "smoothScroll"]);
 
 
 })();
