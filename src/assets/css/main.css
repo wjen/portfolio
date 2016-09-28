@@ -34,8 +34,9 @@ li:hover {
 }
 
 
+
 .wood {
-  background: url("../images/wood.jpg") no-repeat;
+  background: url("../images/wood.jpg") no-repeat fixed;
   background-size: 100%;
 }
 .main-row {
@@ -48,6 +49,13 @@ li:hover {
   height: 150px;
   width: 100%;
   border: 1px black solid;
+}
+#profile-pic {
+  height: 270px;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 10%;
+  margin: 10px;
 }
 
 p {

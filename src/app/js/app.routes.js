@@ -8,25 +8,29 @@
 
   function AppRoutes($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state("homePage", {
+      .state("homePage",
+      {
         url: "/",
         templateUrl: "./app/templates/home.html",
         controller: "MainController",
         controllerAs: "vm"
       })
-      .state("wanderPage", {
+      .state("wanderPage",
+      {
         url: "/",
         templateUrl: "./app/templates/wander.html",
         controller: "MainController",
         controllerAs: "vm"
       })
-        .state("instaTweetPage", {
+        .state("instaTweetPage",
+        {
         url: "/",
         templateUrl: "./app/templates/instaTweet.html",
         controller: "MainController",
         controllerAs: "vm"
       })
-        .state("blackjackPage", {
+        .state("blackjackPage",
+        {
         url: "/",
         templateUrl: "./app/templates/blackjack.html",
         controller: "MainController",
